@@ -1,44 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto">
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".main.MainActivity"
+	tools:ignore="HardcodedText">
 
 	<data>
 
 		<variable
 			name="model"
 			type="azadev.archtest.form.FormViewModel" />
+
+		<variable
+			name="presenter"
+			type="azadev.archtest.form.FormPresenter" />
 	</data>
 
-	<android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+	<ScrollView
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		tools:context=".main.MainActivity">
+		android:layout_height="match_parent">
 
-		<EditText
-			android:id="@+id/editText"
+		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="@={model.value1}" />
+			android:orientation="vertical">
 
-		<EditText
-			android:id="@+id/editText2"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			app:layout_constraintTop_toBottomOf="@+id/editText" />
+			<EditText
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Title"
+				android:text="@={model.title}" />
 
-		<TextView
-			android:id="@+id/editTextOutput"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@{model.value1}"
-			app:layout_constraintTop_toBottomOf="@+id/editText2" />
+			<EditText
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Description (optional)"
+				android:text="@={model.description}" />
 
-		<Button
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:enabled="@{model.value1.trim().length() > 0}"
-			android:text="Save"
-			app:layout_constraintTop_toBottomOf="@+id/editTextOutput" />
+			<android.support.constraint.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
 
-	</android.support.constraint.ConstraintLayout>
+				<Button
+					android:id="@+id/saveButton"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:enabled="@{model.title.length() > 0}"
+					android:onClick="@{() -> presenter.save()}"
+					android:text="Save" />
+
+				<ProgressBar
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginLeft="8dp"
+					android:layout_marginBottom="12dp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toEndOf="@+id/saveButton"
+					app:visibile="@{model.isLoading}" />
+
+				<CheckBox
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="4dp"
+					android:layout_marginRight="4dp"
+					android:layout_marginBottom="8dp"
+					android:checked="@={model.showPreview}"
+					android:text="Show preview"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent" />
+
+			</android.support.constraint.ConstraintLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:background="#eee"
+				android:orientation="vertical"
+				android:padding="12dp"
+				app:visibile="@{model.showPreview.getValue()}">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Title:"
+					android:textStyle="bold" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@{model.title.length() > 0 ? model.title : `(not set)`, default=`(not set)`}" />
+
+				<Space
+					android:layout_width="match_parent"
+					android:layout_height="8dp" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Description:"
+					android:textStyle="bold" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@{model.description.length() > 0 ? model.description : `(not set)`, default=`(not set)`}" />
+
+			</LinearLayout>
+
+		</LinearLayout>
+	</ScrollView>
+
 </layout>

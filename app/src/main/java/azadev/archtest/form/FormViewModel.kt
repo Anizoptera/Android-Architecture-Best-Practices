@@ -4,9 +4,15 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 
 class FormViewModel : ViewModel() {
-	var value1 = MutableLiveData<String>()
+	var title = MutableLiveData<String>()
+	var description = MutableLiveData<String>()
+	var showPreview = MutableLiveData<Boolean>()
+	var isLoading = MutableLiveData<Boolean>()
 
 	init {
-		value1.value = "Hi there!"
+		title.value = ""
+		description.value = ""
+		showPreview.value = false
+		isLoading.value = false
 	}
 }
