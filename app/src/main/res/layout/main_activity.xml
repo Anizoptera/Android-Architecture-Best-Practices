@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	tools:context=".main.MainActivity">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:android="http://schemas.android.com/apk/res/android">
 
-	<EditText
-		android:id="@+id/EditText"
+	<data>
+
+		<variable
+			name="model"
+			type="azadev.archtest.main.MainViewModel" />
+	</data>
+
+	<android.support.constraint.ConstraintLayout
+		xmlns:tools="http://schemas.android.com/tools"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content" />
+		android:layout_height="match_parent"
+		tools:context=".main.MainActivity">
 
-	<TextView
-		android:id="@+id/EditTextOutput"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="Hello World!"
-		app:layout_constraintTop_toBottomOf="@+id/EditText" />
+		<EditText
+			android:id="@+id/editText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@={model.value1}" />
 
-</android.support.constraint.ConstraintLayout>
+		<EditText
+			android:id="@+id/editText2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+		<TextView
+			android:id="@+id/editTextOutput"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@{model.value1}"
+			app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:enabled="@{model.value1.trim().length() > 0}"
+			android:text="Save"
+			app:layout_constraintTop_toBottomOf="@+id/editTextOutput" />
+
+	</android.support.constraint.ConstraintLayout>
+</layout>
