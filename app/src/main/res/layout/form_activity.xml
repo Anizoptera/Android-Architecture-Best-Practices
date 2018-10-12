@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<data>
+
+		<variable
+			name="model"
+			type="azadev.archtest.form.FormViewModel" />
+	</data>
+
+	<android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".main.MainActivity">
+
+		<EditText
+			android:id="@+id/editText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@={model.value1}" />
+
+		<EditText
+			android:id="@+id/editText2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+		<TextView
+			android:id="@+id/editTextOutput"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@{model.value1}"
+			app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:enabled="@{model.value1.trim().length() > 0}"
+			android:text="Save"
+			app:layout_constraintTop_toBottomOf="@+id/editTextOutput" />
+
+	</android.support.constraint.ConstraintLayout>
+</layout>

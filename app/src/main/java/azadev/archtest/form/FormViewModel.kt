@@ -1,9 +1,9 @@
-package azadev.archtest.main
+package azadev.archtest.form
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 
-class MainViewModel : ViewModel() {
+class FormViewModel : ViewModel() {
 	var value1 = MutableLiveData<String>()
 
 	init {
