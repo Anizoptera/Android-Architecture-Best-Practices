@@ -1,23 +1,22 @@
 package azadev.archtest.feat.form
 
 import android.arch.lifecycle.ViewModelProviders
-import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import azadev.archtest.R
+import azadev.archtest.core.databinding.contentView
 import azadev.archtest.databinding.FormActivityBinding
 
 class FormActivity : AppCompatActivity(), FormPresenter.FormPresenterView {
 
-	private lateinit var binding: FormActivityBinding
+	private val binding by contentView<FormActivityBinding>(R.layout.form_activity)
 	private lateinit var model: FormViewModel
 	private lateinit var presenter: FormPresenter
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 
-		binding = DataBindingUtil.setContentView(this, R.layout.form_activity)
 		model = ViewModelProviders.of(this)[FormViewModel::class.java]
 		presenter = FormPresenter(this, model)
 
