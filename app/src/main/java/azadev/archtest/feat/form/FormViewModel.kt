@@ -1,4 +1,4 @@
-package azadev.archtest.form
+package azadev.archtest.feat.form
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel

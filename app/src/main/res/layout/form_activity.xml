@@ -2,18 +2,18 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
-	tools:context=".main.MainActivity"
+	tools:context=".feat.main.MainActivity"
 	tools:ignore="HardcodedText">
 
 	<data>
 
 		<variable
 			name="model"
-			type="azadev.archtest.form.FormViewModel" />
+			type="azadev.archtest.feat.form.FormViewModel" />
 
 		<variable
 			name="presenter"
-			type="azadev.archtest.form.FormPresenter" />
+			type="azadev.archtest.feat.form.FormPresenter" />
 	</data>
 
 	<ScrollView

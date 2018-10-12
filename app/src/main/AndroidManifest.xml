@@ -11,7 +11,7 @@
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme"
 		tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-		<activity android:name=".main.MainActivity">
+		<activity android:name="azadev.archtest.feat.main.MainActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,7 @@
 			</intent-filter>
 		</activity>
 
-		<activity android:name=".form.FormActivity" />
+		<activity android:name="azadev.archtest.feat.form.FormActivity" />
 	</application>
 
 </manifest>

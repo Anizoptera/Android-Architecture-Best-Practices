@@ -1,4 +1,4 @@
-package azadev.archtest.form
+package azadev.archtest.feat.form
 
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil

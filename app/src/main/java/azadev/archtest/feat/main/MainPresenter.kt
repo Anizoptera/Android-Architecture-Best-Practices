@@ -1,4 +1,4 @@
-package azadev.archtest.main
+package azadev.archtest.feat.main
 
 interface MainPresenter {
 	fun goToFormActivity()

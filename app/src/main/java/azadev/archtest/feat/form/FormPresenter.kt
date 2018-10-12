@@ -1,4 +1,4 @@
-package azadev.archtest.form
+package azadev.archtest.feat.form
 
 import azadev.archtest.core.utils.uiThread
 import java.util.*
