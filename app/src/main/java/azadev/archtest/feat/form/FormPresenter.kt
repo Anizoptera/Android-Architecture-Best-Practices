@@ -6,11 +6,11 @@ import kotlin.concurrent.schedule
 
 class FormPresenter(val view: FormPresenterView, val model: FormViewModel) {
 	fun save() {
-		model.isLoading.value = true
+		model.loading.value = true
 
 		Timer().schedule(3000) {
 			uiThread {
-				model.isLoading.value = false
+				model.loading.value = false
 				view.showSuccessMessage()
 			}
 		}
