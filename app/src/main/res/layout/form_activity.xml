@@ -44,7 +44,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:enabled="@{model.saveButtonEnabled}"
-					android:onClick="@{() -> model.save()}"
+					android:onClick="@{() -> model.handleSaveClick()}"
 					android:text="Save" />
 
 				<ProgressBar

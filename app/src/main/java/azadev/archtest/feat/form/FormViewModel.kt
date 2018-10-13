@@ -20,7 +20,7 @@ class FormViewModel : ViewModel() {
 
 	val successMessageCommand = SingleLiveEvent<Void>()
 
-	fun save() {
+	fun handleSaveClick() {
 		loading.value = true
 
 		Timer().schedule(3000) {
