@@ -10,10 +10,6 @@
 		<variable
 			name="model"
 			type="azadev.archtest.feat.form.FormViewModel" />
-
-		<variable
-			name="presenter"
-			type="azadev.archtest.feat.form.FormPresenter" />
 	</data>
 
 	<ScrollView
@@ -48,7 +44,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:enabled="@{model.saveButtonEnabled}"
-					android:onClick="@{() -> presenter.save()}"
+					android:onClick="@{() -> model.save()}"
 					android:text="Save" />
 
 				<ProgressBar

@@ -8,23 +8,23 @@ import azadev.archtest.core.arch.viewModel
 import azadev.archtest.core.databinding.contentView
 import azadev.archtest.databinding.FormActivityBinding
 
-class FormActivity : AppCompatActivity(), FormPresenter.FormPresenterView {
+class FormActivity : AppCompatActivity() {
 
 	private val binding by contentView<FormActivityBinding>(R.layout.form_activity)
 	private val model by viewModel<FormViewModel>()
-	private lateinit var presenter: FormPresenter
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 
-		presenter = FormPresenter(this, model)
-
 		binding.setLifecycleOwner(this)
 		binding.model = model
-		binding.presenter = presenter
+
+		model.successMessageCommand.observe(this) {
+			showSuccessMessage()
+		}
 	}
 
-	override fun showSuccessMessage() {
+	private fun showSuccessMessage() {
 		Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
 	}
 }
