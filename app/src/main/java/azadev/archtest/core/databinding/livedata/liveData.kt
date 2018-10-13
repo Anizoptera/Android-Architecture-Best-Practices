@@ -1,4 +1,4 @@
-package azadev.archtest.core.databinding
+package azadev.archtest.core.databinding.livedata
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MediatorLiveData

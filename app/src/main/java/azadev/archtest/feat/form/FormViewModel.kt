@@ -1,9 +1,9 @@
 package azadev.archtest.feat.form
 
 import android.arch.lifecycle.ViewModel
-import azadev.archtest.core.databinding.SingleLiveEvent
-import azadev.archtest.core.databinding.mediatorLiveData
-import azadev.archtest.core.databinding.mutableLiveData
+import azadev.archtest.core.databinding.livedata.SingleLiveEvent
+import azadev.archtest.core.databinding.livedata.mediatorLiveData
+import azadev.archtest.core.databinding.livedata.mutableLiveData
 import azadev.archtest.core.utils.uiThread
 import java.util.*
 import kotlin.concurrent.schedule
