@@ -1,4 +1,4 @@
-package azadev.archtest.core.arch
+package azadev.android.architecture.core.arch
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders

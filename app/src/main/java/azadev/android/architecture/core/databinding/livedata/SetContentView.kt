@@ -1,4 +1,4 @@
-package azadev.archtest.core.databinding.livedata
+package azadev.android.architecture.core.databinding.livedata
 
 import android.app.Activity
 import android.databinding.DataBindingUtil

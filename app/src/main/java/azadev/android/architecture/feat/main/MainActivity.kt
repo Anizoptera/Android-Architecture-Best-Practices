@@ -1,12 +1,12 @@
-package azadev.archtest.feat.main
+package azadev.android.architecture.feat.main
 
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import azadev.archtest.R
-import azadev.archtest.databinding.MainActivityBinding
-import azadev.archtest.feat.form.FormActivity
+import azadev.android.architecture.R
+import azadev.android.architecture.databinding.MainActivityBinding
+import azadev.android.architecture.feat.form.FormActivity
 
 class MainActivity : AppCompatActivity(), MainPresenter {
 

@@ -1,4 +1,4 @@
-package azadev.archtest.core.databinding.adapters
+package azadev.android.architecture.core.databinding.adapters
 
 import android.databinding.BindingAdapter
 import android.view.View

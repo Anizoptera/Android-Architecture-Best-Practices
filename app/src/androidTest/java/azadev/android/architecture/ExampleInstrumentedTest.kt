@@ -1,4 +1,4 @@
-package azadev.archtest
+package azadev.android.architecture
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

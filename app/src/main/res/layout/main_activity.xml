@@ -5,7 +5,7 @@
 
 		<variable
 			name="presenter"
-			type="azadev.archtest.feat.main.MainPresenter" />
+			type="azadev.android.architecture.feat.main.MainPresenter" />
 	</data>
 
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,7 +13,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="vertical"
-		tools:context=".feat.main.MainActivity"
+		tools:context=".architecture.feat.main.MainActivity"
 		tools:ignore="HardcodedText">
 
 		<TextView

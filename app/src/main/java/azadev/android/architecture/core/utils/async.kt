@@ -1,4 +1,4 @@
-package azadev.archtest.core.utils
+package azadev.android.architecture.core.utils
 
 import android.os.Handler
 import android.os.Looper

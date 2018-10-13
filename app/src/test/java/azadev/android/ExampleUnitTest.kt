@@ -1,4 +1,4 @@
-package azadev.archtest
+package azadev.android
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

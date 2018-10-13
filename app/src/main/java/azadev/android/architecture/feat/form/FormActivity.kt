@@ -1,12 +1,12 @@
-package azadev.archtest.feat.form
+package azadev.android.architecture.feat.form
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
-import azadev.archtest.R
-import azadev.archtest.core.arch.viewModel
-import azadev.archtest.core.databinding.livedata.contentView
-import azadev.archtest.databinding.FormActivityBinding
+import azadev.android.architecture.R
+import azadev.android.architecture.core.arch.viewModel
+import azadev.android.architecture.core.databinding.livedata.contentView
+import azadev.android.architecture.databinding.FormActivityBinding
 
 class FormActivity : AppCompatActivity() {
 
