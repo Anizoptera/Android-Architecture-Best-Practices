@@ -1,24 +1,16 @@
 package azadev.archtest.feat.form
 
-import android.arch.lifecycle.MediatorLiveData
-import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
+import azadev.archtest.core.databinding.mediatorLiveData
+import azadev.archtest.core.databinding.mutableLiveData
 
 class FormViewModel : ViewModel() {
-	val title = MutableLiveData<String>()
-	val description = MutableLiveData<String>()
-	val showPreview = MutableLiveData<Boolean>()
-	val loading = MutableLiveData<Boolean>()
+	val title = mutableLiveData("")
+	val description = mutableLiveData("")
+	val showPreview = mutableLiveData(false)
+	val loading = mutableLiveData(false)
 
-	val saveButtonEnabled = MediatorLiveData<Boolean>()
-
-	init {
-		title.value = ""
-		description.value = ""
-		showPreview.value = false
-		loading.value = false
-
-		saveButtonEnabled.addSource(title) { _ -> saveButtonEnabled.value = !title.value.isNullOrEmpty() && loading.value != true }
-		saveButtonEnabled.addSource(loading) { _ -> saveButtonEnabled.value = !title.value.isNullOrEmpty() && loading.value != true }
+	val saveButtonEnabled = mediatorLiveData(title, loading) {
+		!title.value.isNullOrEmpty() && loading.value != true
 	}
 }
