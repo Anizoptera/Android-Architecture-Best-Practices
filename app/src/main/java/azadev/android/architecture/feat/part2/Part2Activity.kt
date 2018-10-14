@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import azadev.android.architecture.R
 import azadev.android.architecture.core.arch.viewModel
-import azadev.android.architecture.core.databinding.livedata.contentView
+import azadev.android.architecture.core.databinding.contentView
 import azadev.android.architecture.databinding.Part2ActivityBinding
 
 class Part2Activity : AppCompatActivity() {

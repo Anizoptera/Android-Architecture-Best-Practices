@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import azadev.android.architecture.R
-import azadev.android.architecture.core.databinding.livedata.contentView
+import azadev.android.architecture.core.databinding.contentView
 import azadev.android.architecture.core.view.MATCH_PARENT
 import azadev.android.architecture.core.view.WRAP_CONTENT
 import azadev.android.architecture.databinding.MainActivityBinding

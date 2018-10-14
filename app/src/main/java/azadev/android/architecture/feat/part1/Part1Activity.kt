@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import azadev.android.architecture.R
 import azadev.android.architecture.core.arch.viewModel
-import azadev.android.architecture.core.databinding.livedata.contentView
+import azadev.android.architecture.core.databinding.contentView
 import azadev.android.architecture.databinding.Part1ActivityBinding
 
 class Part1Activity : AppCompatActivity() {
