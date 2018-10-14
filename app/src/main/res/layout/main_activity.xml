@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".architecture.feat.main.MainActivity"
+	tools:ignore="HardcodedText">
 
-	<data>
-
-		<variable
-			name="presenter"
-			type="azadev.android.architecture.feat.main.MainPresenter" />
-	</data>
-
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		xmlns:tools="http://schemas.android.com/tools"
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:orientation="vertical"
-		tools:context=".architecture.feat.main.MainActivity"
-		tools:ignore="HardcodedText">
+		android:orientation="vertical">
 
 		<TextView
 			android:layout_width="match_parent"
@@ -23,17 +16,23 @@
 			android:text="Examples:"
 			android:textSize="18sp" />
 
-		<Button
+		<LinearLayout
+			android:id="@+id/buttons"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:onClick="@{() -> presenter.goToPart1Activity()}"
-			android:text="1. Simple Form" />
+			android:layout_height="match_parent"
+			android:orientation="vertical">
 
-		<Button
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:onClick="@{() -> presenter.goToPart2Activity()}"
-			android:text="2. RecyclerView List" />
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="1. Example" />
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="2. Example" />
+
+		</LinearLayout>
 
 	</LinearLayout>
 </layout>
