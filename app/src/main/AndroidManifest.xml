@@ -11,15 +11,15 @@
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme"
 		tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-		<activity android:name="azadev.android.architecture.feat.main.MainActivity">
+		<activity android:name=".feat.main.MainActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-
-		<activity android:name="azadev.android.architecture.feat.form.FormActivity" />
+		<activity android:name=".feat.form.FormActivity" />
+		<activity android:name=".feat.list.ListActivity" />
 	</application>
 
 </manifest>

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import azadev.android.architecture.R
 import azadev.android.architecture.databinding.MainActivityBinding
 import azadev.android.architecture.feat.form.FormActivity
+import azadev.android.architecture.feat.list.ListActivity
 
 class MainActivity : AppCompatActivity(), MainPresenter {
 
@@ -20,5 +21,9 @@ class MainActivity : AppCompatActivity(), MainPresenter {
 
 	override fun goToFormActivity() {
 		startActivity(Intent(this, FormActivity::class.java))
+	}
+
+	override fun goToListActivity() {
+		startActivity(Intent(this, ListActivity::class.java))
 	}
 }

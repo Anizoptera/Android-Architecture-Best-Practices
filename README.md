@@ -9,3 +9,10 @@ For instance, it uses:
   * LiveData
   * ViewModel
 * Data Binding
+
+In addition, some examples use:
+
+* ConstraintLayout
+* RecyclerView
+	* ViewHolder
+	* DiffUtil

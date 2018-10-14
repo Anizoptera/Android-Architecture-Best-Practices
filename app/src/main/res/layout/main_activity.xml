@@ -29,6 +29,12 @@
 			android:onClick="@{() -> presenter.goToFormActivity()}"
 			android:text="Simple Form" />
 
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:onClick="@{() -> presenter.goToListActivity()}"
+			android:text="RecyclerView List" />
+
 	</LinearLayout>
 </layout>
 

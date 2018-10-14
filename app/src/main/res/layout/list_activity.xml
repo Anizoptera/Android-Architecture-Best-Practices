@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<data>
+
+		<variable
+			name="model"
+			type="azadev.android.architecture.feat.list.ListViewModel" />
+	</data>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<Button
+			android:id="@+id/addButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="@{() -> model.handleAddClick()}"
+			android:text="Add More" />
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/recyclerView"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" />
+
+	</LinearLayout>
+</layout>
