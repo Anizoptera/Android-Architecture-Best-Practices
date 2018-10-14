@@ -16,7 +16,6 @@ class Part1Activity : AppCompatActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 
-		binding.setLifecycleOwner(this)
 		binding.model = model
 
 		model.successMessageCommand.observe(this) {

@@ -11,10 +11,12 @@ import azadev.android.architecture.core.view.WRAP_CONTENT
 import azadev.android.architecture.databinding.MainActivityBinding
 import azadev.android.architecture.feat.part1.Part1Activity
 import azadev.android.architecture.feat.part2.Part2Activity
+import azadev.android.architecture.feat.part3.Part3Activity
 
 private val PARTS = arrayOf(
 		"1. Simple Form" to Part1Activity::class.java,
-		"2. RecyclerView List" to Part2Activity::class.java
+		"2. RecyclerView List" to Part2Activity::class.java,
+		"3. Dialogs" to Part3Activity::class.java
 )
 
 class MainActivity : AppCompatActivity() {
