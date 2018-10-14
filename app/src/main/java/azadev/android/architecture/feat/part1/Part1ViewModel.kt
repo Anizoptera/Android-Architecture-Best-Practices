@@ -1,4 +1,4 @@
-package azadev.android.architecture.feat.form
+package azadev.android.architecture.feat.part1
 
 import android.arch.lifecycle.ViewModel
 import azadev.android.architecture.core.databinding.livedata.SingleLiveEvent
@@ -8,7 +8,7 @@ import azadev.android.architecture.core.utils.uiThread
 import java.util.*
 import kotlin.concurrent.schedule
 
-class FormViewModel : ViewModel() {
+class Part1ViewModel : ViewModel() {
 	val title = mutableLiveData("")
 	val description = mutableLiveData("")
 	val showPreview = mutableLiveData(false)

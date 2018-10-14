@@ -9,7 +9,7 @@
 
 		<variable
 			name="model"
-			type="azadev.android.architecture.feat.form.FormViewModel" />
+			type="azadev.android.architecture.feat.part1.Part1ViewModel" />
 	</data>
 
 	<ScrollView

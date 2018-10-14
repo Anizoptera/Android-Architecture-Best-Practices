@@ -1,11 +1,11 @@
-package azadev.android.architecture.feat.list
+package azadev.android.architecture.feat.part2
 
 import android.arch.lifecycle.ViewModel
 import azadev.android.architecture.core.databinding.livedata.mutableLiveData
 
 private const val CHUNK_SIZE = 5
 
-class ListViewModel : ViewModel() {
+class Part2ViewModel : ViewModel() {
 	private var multiplier = -1
 
 	val items = mutableLiveData(generateItems())

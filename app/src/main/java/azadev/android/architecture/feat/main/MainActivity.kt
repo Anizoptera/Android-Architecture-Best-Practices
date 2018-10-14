@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import azadev.android.architecture.R
 import azadev.android.architecture.databinding.MainActivityBinding
-import azadev.android.architecture.feat.form.FormActivity
-import azadev.android.architecture.feat.list.ListActivity
+import azadev.android.architecture.feat.part1.Part1Activity
+import azadev.android.architecture.feat.part2.Part2Activity
 
 class MainActivity : AppCompatActivity(), MainPresenter {
 
@@ -19,11 +19,11 @@ class MainActivity : AppCompatActivity(), MainPresenter {
 		binding.presenter = this
 	}
 
-	override fun goToFormActivity() {
-		startActivity(Intent(this, FormActivity::class.java))
+	override fun goToPart1Activity() {
+		startActivity(Intent(this, Part1Activity::class.java))
 	}
 
-	override fun goToListActivity() {
-		startActivity(Intent(this, ListActivity::class.java))
+	override fun goToPart2Activity() {
+		startActivity(Intent(this, Part2Activity::class.java))
 	}
 }

@@ -18,8 +18,8 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		<activity android:name=".feat.form.FormActivity" />
-		<activity android:name=".feat.list.ListActivity" />
+		<activity android:name=".feat.part1.Part1Activity" />
+		<activity android:name=".feat.part2.Part2Activity" />
 	</application>
 
 </manifest>

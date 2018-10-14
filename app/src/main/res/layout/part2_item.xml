@@ -6,7 +6,7 @@
 
 		<variable
 			name="model"
-			type="azadev.android.architecture.feat.list.ListViewModel" />
+			type="azadev.android.architecture.feat.part2.Part2ViewModel" />
 
 		<variable
 			name="id"

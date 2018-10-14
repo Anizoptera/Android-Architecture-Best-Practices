@@ -1,24 +1,24 @@
-package azadev.android.architecture.feat.list
+package azadev.android.architecture.feat.part2
 
 import android.support.v7.util.DiffUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import azadev.android.architecture.databinding.ListItemBinding
+import azadev.android.architecture.databinding.Part2ItemBinding
 
 typealias AdapterData = List<Int>
 
-class ListAdapter(
+class Part2ListAdapter(
 		private var data: AdapterData,
-		private val model: ListViewModel
-) : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
+		private val model: Part2ViewModel
+) : RecyclerView.Adapter<Part2ListAdapter.ViewHolder>() {
 
-	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListAdapter.ViewHolder {
-		val binding = ListItemBinding.inflate(LayoutInflater.from(parent.context))
-		return ListAdapter.ViewHolder(binding)
+	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Part2ListAdapter.ViewHolder {
+		val binding = Part2ItemBinding.inflate(LayoutInflater.from(parent.context))
+		return Part2ListAdapter.ViewHolder(binding)
 	}
 
-	override fun onBindViewHolder(holder: ListAdapter.ViewHolder, position: Int) {
+	override fun onBindViewHolder(holder: Part2ListAdapter.ViewHolder, position: Int) {
 		val id = data[position]
 
 		holder.binding.model = model
@@ -35,7 +35,7 @@ class ListAdapter(
 		diffResult.dispatchUpdatesTo(this)
 	}
 
-	class ViewHolder(val binding: ListItemBinding) : RecyclerView.ViewHolder(binding.main)
+	class ViewHolder(val binding: Part2ItemBinding) : RecyclerView.ViewHolder(binding.main)
 
 	class DiffCallback(
 			private val oldData: AdapterData,
