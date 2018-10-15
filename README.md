@@ -8,6 +8,7 @@ For instance, it uses:
 * Architecture Components:
   * LiveData
   * ViewModel
+  * Room
 * Data Binding
 
 In addition, some examples use:

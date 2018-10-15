@@ -35,21 +35,21 @@ class Part2ListAdapter(
 		diffResult.dispatchUpdatesTo(this)
 	}
 
-	class ViewHolder(val binding: Part2ItemBinding) : RecyclerView.ViewHolder(binding.main)
+	class ViewHolder(val binding: Part2ItemBinding) : RecyclerView.ViewHolder(binding.root)
 
 	class DiffCallback(
 			private val oldData: AdapterData,
 			private val newData: AdapterData
 	) : DiffUtil.Callback() {
 
-		override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int) =
-				oldData[oldItemPosition] == newData[newItemPosition]
-
 		override fun getOldListSize() = oldData.size
 
 		override fun getNewListSize() = newData.size
 
-		override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int) =
+		override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int) =
 				oldData[oldItemPosition] == newData[newItemPosition]
+
+		override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int) =
+				areItemsTheSame(oldItemPosition, newItemPosition)
 	}
 }
