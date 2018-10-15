@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 
-		binding.buttons.removeAllViews()
+		binding.parts.removeAllViews()
 
 		PARTS.forEach { part ->
 			Button(this).let { button ->
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 					startActivity(Intent(this, part.second))
 				}
 
-				binding.buttons.addView(button, MATCH_PARENT, WRAP_CONTENT)
+				binding.parts.addView(button, MATCH_PARENT, WRAP_CONTENT)
 			}
 		}
 	}

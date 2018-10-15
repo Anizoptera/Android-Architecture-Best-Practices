@@ -5,34 +5,20 @@
 	tools:ignore="HardcodedText">
 
 	<LinearLayout
+		android:id="@+id/parts"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="vertical">
 
-		<TextView
+		<Button
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:gravity="center_horizontal"
-			android:text="Examples:"
-			android:textSize="18sp" />
+			android:text="1. Example" />
 
-		<LinearLayout
-			android:id="@+id/buttons"
+		<Button
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:orientation="vertical">
-
-			<Button
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:text="1. Example" />
-
-			<Button
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:text="2. Example" />
-
-		</LinearLayout>
+			android:layout_height="wrap_content"
+			android:text="2. Example" />
 
 	</LinearLayout>
 </layout>
