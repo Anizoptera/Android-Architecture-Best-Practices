@@ -26,6 +26,8 @@ so each of them focuses on a particular functionality and nothing more.
 Therefore you can easily appeal to a certain part
 to figure out how to implement similar functionality in your own app.
 
+
+
 ## Credits
 
 Before you get into the examples, I recommend to read/watch the following awesome tutorials.
@@ -51,6 +53,51 @@ So go ahead!
 * [Android Jetpack: Room][SKWh4ckvFPM]
 * [Android Room with a View - Kotlin][room-with-a-view-kotlin]
 * [Android Persistence codelab][persistence]
+
+### All together:
+
+* [Build an App with Architecture Components][build-app-with-arch-components]
+
+
+
+## Guide to App Architecture
+
+Considering the links above now we can imagine how the architecture should look like:
+
+![App Architecture Scheme](etc/readme-files/app-architecture.png)
+
+Here's a summary explanation of the different classes in the diagram, starting from the top:
+
+### UI Controllers
+
+UI Controllers are activities or fragments in conjunction with corresponding XML-files if present.
+The only job of UI controllers is to know how to display data and pass on UI events,
+such as the user pressing a button.
+
+> **Note!**
+> UI Controllers neither contain the UI data, nor directly manipulate data.
+> Don't modify ViewModel's data directly from the UI, even if it looks much simpler, than implement a handler within ViewModel.
+
+### ViewModels and LiveData
+
+These classes represent all of the data needed for the UI to display.
+ViewModels doesn't know anything about the UI. It just provides reactive fields that UI can observe and update itself.
+To perform ViewModel-to-UI communication use one of reactive patterns like [SingleLiveEvent or Event wrapper][ac2622673150].
+
+### Repository
+
+This class is the single source of truth for all of our app's data and acts as a clean API for the UI to communicate with.
+ViewModels simply request data from the repository.
+They do not need to worry about whether the repository should load from the database or network,
+or how or when to persist the data. The repository manages all of this.
+As part of this responsibility, the repository is a mediator between different data sources.
+
+> **Note!**
+> This architecture stresses that each class in the diagram only stores a reference to the class or classes
+> directly "below it" and not any classes above it.
+> This means the ViewModel class will store a reference to the Repository class,
+> but not to the UI controller class above it or the Remote Data Source class two levels below it.
+
 
 ## Examples
 
@@ -94,10 +141,13 @@ Working with SQLite database has never been so pretty!
 
 ![Room Database](etc/readme-files/part-4.gif)
 
+
+
 ## License
 
 This software is released under the MIT License.
 See [LICENSE.txt](LICENSE.txt) for details.
+
 
 
 [TW9dSEgJIa8]: https://www.youtube.com/watch?v=TW9dSEgJIa8
@@ -112,3 +162,5 @@ See [LICENSE.txt](LICENSE.txt) for details.
 [SKWh4ckvFPM]: https://www.youtube.com/watch?v=SKWh4ckvFPM
 [room-with-a-view-kotlin]: https://codelabs.developers.google.com/codelabs/android-room-with-a-view-kotlin/
 [persistence]: https://codelabs.developers.google.com/codelabs/android-persistence/
+
+[build-app-with-arch-components]: https://codelabs.developers.google.com/codelabs/build-app-with-arch-components/
