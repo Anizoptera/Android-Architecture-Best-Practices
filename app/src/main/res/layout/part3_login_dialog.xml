@@ -49,7 +49,7 @@
 			android:layout_marginTop="4dp"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintTop_toBottomOf="@+id/password"
-			app:visibile="@{model.loading}" />
+			app:gone="@{!model.loading}" />
 
 	</android.support.constraint.ConstraintLayout>
 </layout>

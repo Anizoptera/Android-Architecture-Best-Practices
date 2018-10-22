@@ -55,7 +55,7 @@
 					android:layout_marginBottom="12dp"
 					app:layout_constraintBottom_toBottomOf="parent"
 					app:layout_constraintStart_toEndOf="@+id/saveButton"
-					app:visibile="@{model.loading}" />
+					app:gone="@{!model.loading}" />
 
 				<CheckBox
 					android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
 				android:background="#eee"
 				android:orientation="vertical"
 				android:padding="12dp"
-				app:visibile="@{model.showPreview}">
+				app:gone="@{!model.showPreview}">
 
 				<TextView
 					android:layout_width="wrap_content"
