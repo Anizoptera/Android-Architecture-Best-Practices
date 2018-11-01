@@ -1,6 +1,5 @@
 package azadev.android.architecture.feat.part2
 
-import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -17,15 +16,9 @@ class Part2Activity : AppCompatActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 
-		val listAdapter = Part2ListAdapter(model.items.value!!, model)
-
 		binding.model = model
 
 		binding.recyclerView.layoutManager = LinearLayoutManager(this)
-		binding.recyclerView.adapter = listAdapter
-
-		model.items.observe(this, Observer { list ->
-			listAdapter.setData(list!!)
-		})
+		binding.recyclerView.adapter = Part2ListAdapter(this, model)
 	}
 }

@@ -1,5 +1,6 @@
 package azadev.android.architecture.feat.part2
 
+import android.arch.lifecycle.Observer
 import android.support.v7.util.DiffUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -9,9 +10,21 @@ import azadev.android.architecture.databinding.Part2ItemBinding
 typealias AdapterData = List<Int>
 
 class Part2ListAdapter(
-	private var data: AdapterData,
+	activity: Part2Activity,
 	private val model: Part2ViewModel
 ) : RecyclerView.Adapter<Part2ListAdapter.ViewHolder>() {
+
+	private var data: AdapterData
+
+	init {
+		data = model.items.value!!
+
+		model.items.observe(activity, Observer { newData ->
+			val diffResult = DiffUtil.calculateDiff(DiffCallback(data, newData!!))
+			data = newData
+			diffResult.dispatchUpdatesTo(this)
+		})
+	}
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Part2ListAdapter.ViewHolder {
 		val binding = Part2ItemBinding.inflate(LayoutInflater.from(parent.context))
@@ -28,12 +41,6 @@ class Part2ListAdapter(
 	}
 
 	override fun getItemCount() = data.size
-
-	fun setData(newData: AdapterData) {
-		val diffResult = DiffUtil.calculateDiff(DiffCallback(data, newData))
-		data = newData
-		diffResult.dispatchUpdatesTo(this)
-	}
 
 	class ViewHolder(val binding: Part2ItemBinding) : RecyclerView.ViewHolder(binding.root)
 
