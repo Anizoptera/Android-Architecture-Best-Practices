@@ -47,9 +47,9 @@
 			android:layout_width="24dp"
 			android:layout_height="24dp"
 			android:layout_marginTop="4dp"
+			app:gone="@{!model.loading}"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/password"
-			app:gone="@{!model.loading}" />
+			app:layout_constraintTop_toBottomOf="@+id/password" />
 
 	</android.support.constraint.ConstraintLayout>
 </layout>

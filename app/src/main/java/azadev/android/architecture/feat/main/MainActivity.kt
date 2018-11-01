@@ -15,10 +15,10 @@ import azadev.android.architecture.feat.part3.Part3Activity
 import azadev.android.architecture.feat.part4.Part4Activity
 
 private val PARTS = arrayOf(
-		"1. Simple Form" to Part1Activity::class.java,
-		"2. RecyclerView List" to Part2Activity::class.java,
-		"3. Dialogs" to Part3Activity::class.java,
-		"4. Room Database" to Part4Activity::class.java
+	"1. Simple Form" to Part1Activity::class.java,
+	"2. RecyclerView List" to Part2Activity::class.java,
+	"3. Dialogs" to Part3Activity::class.java,
+	"4. Room Database" to Part4Activity::class.java
 )
 
 class MainActivity : AppCompatActivity() {

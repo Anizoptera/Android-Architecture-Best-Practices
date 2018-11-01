@@ -33,7 +33,7 @@ class Part3Activity : AppCompatActivity(), Part3LoginDialogFragment.Listener {
 
 	private fun openLoginDialog() {
 		loginDialogFragment
-				?: Part3LoginDialogFragment().show(supportFragmentManager, "LoginDialog")
+			?: Part3LoginDialogFragment().show(supportFragmentManager, "LoginDialog")
 	}
 
 	private fun closeLoginDialog() {

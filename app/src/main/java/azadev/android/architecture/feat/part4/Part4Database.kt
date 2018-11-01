@@ -18,8 +18,8 @@ abstract class Part4Database : RoomDatabase() {
 		fun getDatabase(context: Context): Part4Database {
 			return INSTANCE ?: synchronized(Part4Database::class.java) {
 				INSTANCE = INSTANCE ?: Room.databaseBuilder(
-						context.applicationContext,
-						Part4Database::class.java, "part4"
+					context.applicationContext,
+					Part4Database::class.java, "part4"
 				).allowMainThreadQueries().build()
 
 				return INSTANCE!!

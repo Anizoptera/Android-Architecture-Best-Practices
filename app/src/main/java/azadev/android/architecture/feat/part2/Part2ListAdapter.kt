@@ -9,8 +9,8 @@ import azadev.android.architecture.databinding.Part2ItemBinding
 typealias AdapterData = List<Int>
 
 class Part2ListAdapter(
-		private var data: AdapterData,
-		private val model: Part2ViewModel
+	private var data: AdapterData,
+	private val model: Part2ViewModel
 ) : RecyclerView.Adapter<Part2ListAdapter.ViewHolder>() {
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Part2ListAdapter.ViewHolder {
@@ -38,8 +38,8 @@ class Part2ListAdapter(
 	class ViewHolder(val binding: Part2ItemBinding) : RecyclerView.ViewHolder(binding.root)
 
 	class DiffCallback(
-			private val oldData: AdapterData,
-			private val newData: AdapterData
+		private val oldData: AdapterData,
+		private val newData: AdapterData
 	) : DiffUtil.Callback() {
 
 		override fun getOldListSize() = oldData.size
@@ -47,9 +47,9 @@ class Part2ListAdapter(
 		override fun getNewListSize() = newData.size
 
 		override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int) =
-				oldData[oldItemPosition] == newData[newItemPosition]
+			oldData[oldItemPosition] == newData[newItemPosition]
 
 		override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int) =
-				areItemsTheSame(oldItemPosition, newItemPosition)
+			areItemsTheSame(oldItemPosition, newItemPosition)
 	}
 }
