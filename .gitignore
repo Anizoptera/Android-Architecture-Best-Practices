@@ -1,8 +1,39 @@
+# IntelliJ
+# https://www.jetbrains.com/help/idea/2016.1/synchronizing-and-sharing-settings.html#d1526026e189
+/.idea/caches/
+/.idea/dictionaries/
+/.idea/libraries/
+/projectFilesBackup*/
 *.iml
-.gradle/
-/local.properties
-.idea/
-.DS_Store
-/build/
+
+# User-specific settings
+/.idea/runConfigurations.xml
+/.idea/tasks.xml
+/.idea/workspace.xml
+
+# Environment-specific settings
+/.idea/misc.xml
+/.idea/modules.xml
+
+# May contain sensitive data
+/.idea/dataSources.ids
+/.idea/datasources.xml
+
+
+# Local properties
+local.properties
+signing.properties
+
+
+# Build/Work flow
+build/
+gen/
+out/
+/sources/
 /captures/
-.externalNativeBuild/
+
+
+# Other
+.gradle/
+.DS_Store
+.externalNativeBuild
