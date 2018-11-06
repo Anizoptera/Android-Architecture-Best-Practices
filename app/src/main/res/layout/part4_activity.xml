@@ -81,7 +81,8 @@
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintEnd_toStartOf="@+id/guideline3"
 			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toTopOf="@+id/guideline2" />
+			app:layout_constraintTop_toTopOf="@+id/guideline2"
+			tools:listitem="@layout/part4_item" />
 
 		<android.support.v7.widget.RecyclerView
 			android:id="@+id/recyclerViewOfOdd"
@@ -92,6 +93,7 @@
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toEndOf="@+id/guideline3"
-			app:layout_constraintTop_toTopOf="@+id/guideline2" />
+			app:layout_constraintTop_toTopOf="@+id/guideline2"
+			tools:listitem="@layout/part4_item" />
 	</android.support.constraint.ConstraintLayout>
 </layout>

@@ -13,7 +13,7 @@ class Part4ListAdapter(
 ) : RecyclerView.Adapter<Part4ListAdapter.ViewHolder>() {
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Part4ListAdapter.ViewHolder {
-		val binding = Part4ItemBinding.inflate(LayoutInflater.from(parent.context))
+		val binding = Part4ItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 		return Part4ListAdapter.ViewHolder(binding)
 	}
 

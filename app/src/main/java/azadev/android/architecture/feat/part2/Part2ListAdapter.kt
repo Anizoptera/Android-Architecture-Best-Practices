@@ -27,7 +27,7 @@ class Part2ListAdapter(
 	}
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Part2ListAdapter.ViewHolder {
-		val binding = Part2ItemBinding.inflate(LayoutInflater.from(parent.context))
+		val binding = Part2ItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 		return Part2ListAdapter.ViewHolder(binding)
 	}
 
