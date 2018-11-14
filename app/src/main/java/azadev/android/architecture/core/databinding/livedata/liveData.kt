@@ -17,8 +17,8 @@ fun <T> mutableLiveData(defaultValue: T? = null): MutableLiveData<T> {
 fun <T> mediatorLiveData(vararg liveDataItems: LiveData<*>, predicate: () -> T): MediatorLiveData<T> {
 	val mediator = MediatorLiveData<T>()
 
-	liveDataItems.forEach { data ->
-		mediator.addSource(data) {
+	liveDataItems.forEach { liveData ->
+		mediator.addSource(liveData) {
 			mediator.value = predicate()
 		}
 	}
