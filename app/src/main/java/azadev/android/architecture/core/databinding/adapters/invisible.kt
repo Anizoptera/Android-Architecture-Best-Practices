@@ -5,10 +5,5 @@ import android.view.View
 
 @BindingAdapter("app:invisible")
 fun setInvisible(view: View, value: Boolean) {
-	if (value) {
-		view.visibility = View.INVISIBLE
-	}
-	else {
-		view.visibility = View.VISIBLE
-	}
+    view.visibility = if (value) View.INVISIBLE else View.VISIBLE
 }
