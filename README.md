@@ -47,6 +47,7 @@ So go ahead!
 * [LiveData Clean Code using MVVM and Android Architecture Components][53468ed0dc1f]
 * [LiveData with SnackBar, Navigation and other events (the SingleLiveEvent case)][ac2622673150]
 * [Android Architecture: Communication between ViewModel and View][ce14805d72bf]
+* [ViewModels and LiveData: Patterns + AntiPatterns][21efaef74a54]
 
 ### Room:
 
@@ -113,13 +114,13 @@ It also utilizes Google's SingleLiveEvent to display a Toast after the form is s
 
 ![Simple Form](etc/readme-files/part-1.gif)
 
-### 2. RecyclerView List
+### 2. Simple Reactive List
 
 Here we create a reactive and efficient list of items.
 
 It uses RecyclerView, Adapter and ViewHolder in conjustion with ViewModel and LiveData.
 
-![RecyclerView List](etc/readme-files/part-2.gif)
+![RecyclerView Reactive List](etc/readme-files/part-2.gif)
 
 ### 3. Dialogs
 
@@ -141,6 +142,20 @@ Working with SQLite database has never been so pretty!
 
 ![Room Database](etc/readme-files/part-4.gif)
 
+### 5. Interactive List
+
+This example shows an approach to create a list with each item containing a CheckBox.
+CheckBox (like other Android components) isn't well suitable for the unidirectional data flow principle.
+It's actually not a big deal since we have the two-way data-binding feature,
+which is really convenient when the View is directly connected to a LiveData-field within the ViewModel.
+But things are getting quite confusing when we're building lists.
+
+To make the example more informative I've added a couple of features:
+- Total number of selected items.
+- Delay between clicking CheckBox and the actual updating of the dataset (simulating a request or something).
+
+![Interactive RecyclerView List](etc/readme-files/part-5.gif)
+
 
 
 ## License
@@ -158,6 +173,7 @@ See [LICENSE.txt](LICENSE.txt) for details.
 [53468ed0dc1f]: https://android.jlelse.eu/lets-keep-activity-dumb-using-livedata-53468ed0dc1f
 [ac2622673150]: https://medium.com/androiddevelopers/livedata-with-snackbar-navigation-and-other-events-the-singleliveevent-case-ac2622673150
 [ce14805d72bf]: https://android.jlelse.eu/android-architecture-communication-between-viewmodel-and-view-ce14805d72bf
+[21efaef74a54]: https://medium.com/androiddevelopers/viewmodels-and-livedata-patterns-antipatterns-21efaef74a54
 
 [SKWh4ckvFPM]: https://www.youtube.com/watch?v=SKWh4ckvFPM
 [room-with-a-view-kotlin]: https://codelabs.developers.google.com/codelabs/android-room-with-a-view-kotlin/

@@ -13,12 +13,14 @@ import azadev.android.architecture.feat.part1.Part1Activity
 import azadev.android.architecture.feat.part2.Part2Activity
 import azadev.android.architecture.feat.part3.Part3Activity
 import azadev.android.architecture.feat.part4.Part4Activity
+import azadev.android.architecture.feat.part5.Part5Activity
 
 private val PARTS = arrayOf(
 	"1. Simple Form" to Part1Activity::class.java,
-	"2. RecyclerView List" to Part2Activity::class.java,
+	"2. Simple Reactive List" to Part2Activity::class.java,
 	"3. Dialogs" to Part3Activity::class.java,
-	"4. Room Database" to Part4Activity::class.java
+	"4. Room Database" to Part4Activity::class.java,
+	"5. Interactive List" to Part5Activity::class.java
 )
 
 class MainActivity : AppCompatActivity() {

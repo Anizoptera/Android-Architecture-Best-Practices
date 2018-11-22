@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<data>
+
+		<variable
+			name="model"
+			type="azadev.android.architecture.feat.part5.Part5ViewModel" />
+
+		<variable
+			name="data"
+			type="azadev.android.architecture.feat.part5.Part5ListItemData" />
+
+	</data>
+
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minHeight="48dp"
+		android:orientation="vertical">
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#ccc" />
+
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:text="@{data.name, default=name}"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<CheckBox
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:checked="@{data.isSelected}"
+			android:onClick="@{(v) -> model.handleCheckboxClick(data.id)}"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:visible="@{!data.isLoading}" />
+
+		<ProgressBar
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:layout_marginRight="6dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:visible="@{data.isLoading}" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#ccc"
+			app:layout_constraintBottom_toBottomOf="parent" />
+
+	</android.support.constraint.ConstraintLayout>
+
+</layout>

@@ -22,6 +22,7 @@
 		<activity android:name=".feat.part2.Part2Activity" />
 		<activity android:name=".feat.part3.Part3Activity" />
 		<activity android:name=".feat.part4.Part4Activity" />
+		<activity android:name=".feat.part5.Part5Activity" />
 	</application>
 
 </manifest>

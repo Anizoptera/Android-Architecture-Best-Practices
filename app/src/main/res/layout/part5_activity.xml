@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:ignore="HardcodedText">
+
+	<data>
+
+		<variable
+			name="model"
+			type="azadev.android.architecture.feat.part5.Part5ViewModel" />
+
+	</data>
+
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<Button
+			android:id="@+id/addButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="@{() -> model.handleAddClick()}"
+			android:text="Add Items" />
+
+		<Button
+			android:id="@+id/removeButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="@{() -> model.handleRemoveClick()}"
+			android:text="@{`Remove (` + model.selectedCount + `)`}"
+			app:layout_constraintStart_toEndOf="@+id/addButton" />
+
+		<Button
+			android:id="@+id/selectAllButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="@{() -> model.handleSelectAllClick()}"
+			android:text="Select All"
+			app:layout_constraintStart_toEndOf="@+id/removeButton" />
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/recyclerView"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:padding="4dp"
+			android:scrollbars="vertical"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/addButton"
+			tools:listitem="@layout/part5_item" />
+
+	</android.support.constraint.ConstraintLayout>
+</layout>
