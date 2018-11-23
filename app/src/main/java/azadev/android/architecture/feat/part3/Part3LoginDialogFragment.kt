@@ -48,16 +48,17 @@ class Part3LoginDialogFragment : DialogFragment() {
 		binding.setLifecycleOwner(this)
 		binding.model = model
 
-		val dialog = AlertDialog.Builder(activity!!).apply {
-			setView(view)
-			setPositiveButton("Go", null)
-			setNegativeButton("Cancel", null)
-			isCancelable = false
-		}.create()
+		val dialog = AlertDialog.Builder(activity!!)
+			.setView(view)
+			.setPositiveButton("Go", null)
+			.setNegativeButton("Cancel", null)
+			.create()
+
+		isCancelable = false
 
 		// Workaround to prevent buttons to close the dialog
 		// https://stackoverflow.com/q/2620444/4899346
-		dialog.setOnShowListener { _ ->
+		dialog.setOnShowListener {
 			dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
 				model.handleLoginButtonClick()
 			}
