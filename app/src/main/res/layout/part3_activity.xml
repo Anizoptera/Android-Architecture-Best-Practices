@@ -9,6 +9,7 @@
 		<variable
 			name="model"
 			type="azadev.android.architecture.feat.part3.Part3ViewModel" />
+
 	</data>
 
 	<android.support.constraint.ConstraintLayout

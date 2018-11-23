@@ -10,11 +10,13 @@
 		<variable
 			name="model"
 			type="azadev.android.architecture.feat.part1.Part1ViewModel" />
+
 	</data>
 
 	<ScrollView
 		android:layout_width="match_parent"
-		android:layout_height="match_parent">
+		android:layout_height="match_parent"
+		android:padding="8dp">
 
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -24,14 +26,14 @@
 			<EditText
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:enabled="@{!model.loading}"
+				android:enabled="@{!model.isLoading}"
 				android:hint="Title"
 				android:text="@={model.title}" />
 
 			<EditText
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:enabled="@{!model.loading}"
+				android:enabled="@{!model.isLoading}"
 				android:hint="Description (optional)"
 				android:text="@={model.description}" />
 
@@ -43,7 +45,7 @@
 					android:id="@+id/saveButton"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:enabled="@{model.saveButtonEnabled}"
+					android:enabled="@{model.isSaveButtonEnabled}"
 					android:onClick="@{() -> model.handleSaveClick()}"
 					android:text="Save" />
 
@@ -53,7 +55,7 @@
 					android:layout_marginStart="8dp"
 					android:layout_marginLeft="8dp"
 					android:layout_marginBottom="12dp"
-					app:gone="@{!model.loading}"
+					app:gone="@{!model.isLoading}"
 					app:layout_constraintBottom_toBottomOf="parent"
 					app:layout_constraintStart_toEndOf="@+id/saveButton" />
 
@@ -63,7 +65,7 @@
 					android:layout_marginEnd="4dp"
 					android:layout_marginRight="4dp"
 					android:layout_marginBottom="8dp"
-					android:checked="@={model.showPreview}"
+					android:checked="@={model.isPreviewShown}"
 					android:text="Show preview"
 					app:layout_constraintBottom_toBottomOf="parent"
 					app:layout_constraintEnd_toEndOf="parent" />
@@ -77,7 +79,7 @@
 				android:background="#eee"
 				android:orientation="vertical"
 				android:padding="12dp"
-				app:gone="@{!model.showPreview}">
+				app:gone="@{!model.isPreviewShown}">
 
 				<TextView
 					android:layout_width="wrap_content"

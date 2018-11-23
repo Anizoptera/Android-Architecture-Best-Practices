@@ -11,6 +11,7 @@
 		<variable
 			name="id"
 			type="int" />
+
 	</data>
 
 	<android.support.constraint.ConstraintLayout

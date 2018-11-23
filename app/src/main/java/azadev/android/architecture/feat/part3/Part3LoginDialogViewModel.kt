@@ -13,7 +13,7 @@ class Part3LoginDialogViewModel : ViewModel() {
 
 	val remember = mutableLiveData(true)
 
-	val loading = mutableLiveData(false)
+	val isLoading = mutableLiveData(false)
 
 	val validationErrorCommand = SingleLiveEvent<Void>()
 
@@ -26,11 +26,11 @@ class Part3LoginDialogViewModel : ViewModel() {
 			return
 		}
 
-		loading.value = true
+		isLoading.value = true
 
 		Timer().schedule(3000) {
 			uiThread {
-				loading.value = false
+				isLoading.value = false
 				loggedInCommand.call()
 			}
 		}

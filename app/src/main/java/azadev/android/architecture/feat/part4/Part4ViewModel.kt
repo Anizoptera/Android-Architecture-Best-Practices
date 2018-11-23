@@ -5,6 +5,7 @@ import android.arch.lifecycle.AndroidViewModel
 import azadev.android.architecture.core.utils.randomHash
 
 class Part4ViewModel(val app: Application) : AndroidViewModel(app) {
+
 	private val dao get() = Part4Database.getDatabase(app).itemDao()
 
 	val allItems = dao.getAll()

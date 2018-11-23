@@ -10,8 +10,8 @@ import azadev.android.architecture.databinding.Part3ActivityBinding
 
 class Part3Activity : AppCompatActivity(), Part3LoginDialogFragment.Listener {
 
-	private val binding by contentView<Part3ActivityBinding>(R.layout.part3_activity)
 	private val model by viewModel<Part3ViewModel>()
+	private val binding by contentView<Part3ActivityBinding>(R.layout.part3_activity)
 
 	private val loginDialogFragment
 		get() = supportFragmentManager.findFragmentByTag("LoginDialog") as? Part3LoginDialogFragment
@@ -21,7 +21,7 @@ class Part3Activity : AppCompatActivity(), Part3LoginDialogFragment.Listener {
 
 		binding.model = model
 
-		model.loginDialogOpen.observe(this, Observer {
+		model.isLoginDialogOpen.observe(this, Observer {
 			if (it == true) {
 				openLoginDialog()
 			}

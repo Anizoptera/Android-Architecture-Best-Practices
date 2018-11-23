@@ -11,21 +11,23 @@ import kotlin.concurrent.schedule
 class Part1ViewModel : ViewModel() {
 	val title = mutableLiveData("")
 	val description = mutableLiveData("")
-	val showPreview = mutableLiveData(false)
-	val loading = mutableLiveData(false)
 
-	val saveButtonEnabled = mediatorLiveData(title, loading) {
-		!title.value.isNullOrEmpty() && loading.value != true
+	val isPreviewShown = mutableLiveData(false)
+
+	val isLoading = mutableLiveData(false)
+
+	val isSaveButtonEnabled = mediatorLiveData(title, isLoading) {
+		!title.value.isNullOrEmpty() && isLoading.value != true
 	}
 
 	val successMessageCommand = SingleLiveEvent<Void>()
 
 	fun handleSaveClick() {
-		loading.value = true
+		isLoading.value = true
 
 		Timer().schedule(3000) {
 			uiThread {
-				loading.value = false
+				isLoading.value = false
 				successMessageCommand.call()
 			}
 		}

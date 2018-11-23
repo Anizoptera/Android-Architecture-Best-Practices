@@ -9,6 +9,7 @@
 		<variable
 			name="model"
 			type="azadev.android.architecture.feat.part3.Part3LoginDialogViewModel" />
+
 	</data>
 
 	<android.support.constraint.ConstraintLayout
@@ -21,7 +22,7 @@
 			android:id="@+id/username"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:enabled="@{!model.loading}"
+			android:enabled="@{!model.isLoading}"
 			android:hint="Username"
 			android:text="@={model.username}" />
 
@@ -29,7 +30,7 @@
 			android:id="@+id/password"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:enabled="@{!model.loading}"
+			android:enabled="@{!model.isLoading}"
 			android:hint="Password"
 			android:inputType="textPassword"
 			android:text="@={model.password}"
@@ -39,7 +40,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:checked="@={model.remember}"
-			android:enabled="@{!model.loading}"
+			android:enabled="@{!model.isLoading}"
 			android:text="Remember me"
 			app:layout_constraintTop_toBottomOf="@+id/password" />
 
@@ -47,7 +48,7 @@
 			android:layout_width="24dp"
 			android:layout_height="24dp"
 			android:layout_marginTop="4dp"
-			app:gone="@{!model.loading}"
+			app:gone="@{!model.isLoading}"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintTop_toBottomOf="@+id/password" />
 

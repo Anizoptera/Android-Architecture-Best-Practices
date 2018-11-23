@@ -10,8 +10,8 @@ import azadev.android.architecture.databinding.Part1ActivityBinding
 
 class Part1Activity : AppCompatActivity() {
 
-	private val binding by contentView<Part1ActivityBinding>(R.layout.part1_activity)
 	private val model by viewModel<Part1ViewModel>()
+	private val binding by contentView<Part1ActivityBinding>(R.layout.part1_activity)
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
