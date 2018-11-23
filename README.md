@@ -26,6 +26,10 @@ so each of them focuses on a particular functionality and nothing more.
 Therefore you can easily appeal to a certain part
 to figure out how to implement similar functionality in your own app.
 
+Unlike the official [Android Architecture Components samples][googlesamples-architecture],
+this project is intended to demonstrate how to implement certain cases you faces in the real life.
+It's more like tips, not complete apps. All these tips are implemented within a single app.
+
 
 
 ## Credits
@@ -58,6 +62,7 @@ So go ahead!
 ### All together:
 
 * [Build an App with Architecture Components][build-app-with-arch-components]
+* [Android Architecture Components samples][googlesamples-architecture]
 
 
 
@@ -180,3 +185,4 @@ See [LICENSE.txt](LICENSE.txt) for details.
 [persistence]: https://codelabs.developers.google.com/codelabs/android-persistence/
 
 [build-app-with-arch-components]: https://codelabs.developers.google.com/codelabs/build-app-with-arch-components/
+[googlesamples-architecture]: https://github.com/googlesamples/android-architecture-components
