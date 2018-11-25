@@ -46,7 +46,6 @@ class Part5ListAdapter(
 			oldData[oldItemPosition].id == newData[newItemPosition].id
 
 		override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int) =
-			oldData[oldItemPosition].isSelected == newData[newItemPosition].isSelected
-					&& oldData[oldItemPosition].isLoading == newData[newItemPosition].isLoading
+			oldData[oldItemPosition] == newData[newItemPosition]
 	}
 }

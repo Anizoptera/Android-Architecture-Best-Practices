@@ -50,6 +50,6 @@ class Part2ListAdapter(
 			oldData[oldItemPosition] == newData[newItemPosition]
 
 		override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int) =
-			areItemsTheSame(oldItemPosition, newItemPosition)
+			oldData[oldItemPosition] == newData[newItemPosition]
 	}
 }

@@ -44,6 +44,6 @@ class Part4ListAdapter(
 			oldData[oldItemPosition].id == newData[newItemPosition].id
 
 		override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int) =
-			areItemsTheSame(oldItemPosition, newItemPosition)
+			oldData[oldItemPosition] == newData[newItemPosition]
 	}
 }
