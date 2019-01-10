@@ -1,8 +1,8 @@
 package azadev.android.architecture.feat.part5
 
 import android.arch.lifecycle.ViewModel
-import azadev.android.architecture.core.databinding.livedata.mediatorLiveData
-import azadev.android.architecture.core.databinding.livedata.mutableLiveData
+import azadev.android.architecture.core.arch.livedata.mediatorLiveData
+import azadev.android.architecture.core.arch.livedata.mutableLiveData
 import kotlin.concurrent.thread
 
 private const val CHUNK_SIZE = 5

@@ -4,8 +4,8 @@ import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import azadev.android.architecture.R
-import azadev.android.architecture.core.arch.viewModel
-import azadev.android.architecture.core.databinding.contentView
+import azadev.android.architecture.core.arch.viewmodel.viewModel
+import azadev.android.architecture.core.databinding.inflaters.contentView
 import azadev.android.architecture.databinding.Part3ActivityBinding
 
 class Part3Activity : AppCompatActivity(), Part3LoginDialogFragment.Listener {

@@ -1,4 +1,4 @@
-package azadev.android.architecture.core.databinding.livedata
+package azadev.android.architecture.core.arch.livedata
 
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.MutableLiveData

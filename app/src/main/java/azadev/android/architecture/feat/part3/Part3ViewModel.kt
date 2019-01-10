@@ -1,7 +1,7 @@
 package azadev.android.architecture.feat.part3
 
 import android.arch.lifecycle.ViewModel
-import azadev.android.architecture.core.databinding.livedata.mutableLiveData
+import azadev.android.architecture.core.arch.livedata.mutableLiveData
 
 class Part3ViewModel : ViewModel() {
 	val isLoginDialogOpen = mutableLiveData(false)

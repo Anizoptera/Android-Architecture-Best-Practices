@@ -8,7 +8,7 @@ import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.widget.Toast
 import azadev.android.architecture.R
-import azadev.android.architecture.core.arch.viewModel
+import azadev.android.architecture.core.arch.viewmodel.viewModel
 import azadev.android.architecture.databinding.Part3LoginDialogBinding
 
 class Part3LoginDialogFragment : DialogFragment() {

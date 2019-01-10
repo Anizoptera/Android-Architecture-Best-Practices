@@ -1,7 +1,7 @@
 package azadev.android.architecture.feat.part2
 
 import android.arch.lifecycle.ViewModel
-import azadev.android.architecture.core.databinding.livedata.mutableLiveData
+import azadev.android.architecture.core.arch.livedata.mutableLiveData
 
 private const val CHUNK_SIZE = 5
 

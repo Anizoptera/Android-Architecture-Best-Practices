@@ -1,9 +1,9 @@
 package azadev.android.architecture.feat.part1
 
 import android.arch.lifecycle.ViewModel
-import azadev.android.architecture.core.databinding.livedata.SingleLiveEvent
-import azadev.android.architecture.core.databinding.livedata.mediatorLiveData
-import azadev.android.architecture.core.databinding.livedata.mutableLiveData
+import azadev.android.architecture.core.arch.livedata.SingleLiveEvent
+import azadev.android.architecture.core.arch.livedata.mediatorLiveData
+import azadev.android.architecture.core.arch.livedata.mutableLiveData
 import azadev.android.architecture.core.utils.uiThread
 import java.util.*
 import kotlin.concurrent.schedule

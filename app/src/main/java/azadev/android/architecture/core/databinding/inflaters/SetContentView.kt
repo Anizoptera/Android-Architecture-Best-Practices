@@ -1,4 +1,4 @@
-package azadev.android.architecture.core.databinding
+package azadev.android.architecture.core.databinding.inflaters
 
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
