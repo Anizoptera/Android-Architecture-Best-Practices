@@ -5,5 +5,5 @@ import android.view.View
 
 @BindingAdapter("app:gone")
 fun setGone(view: View, value: Boolean) {
-    view.visibility = if (value) View.GONE else View.VISIBLE
+	view.visibility = if (value) View.GONE else View.VISIBLE
 }
