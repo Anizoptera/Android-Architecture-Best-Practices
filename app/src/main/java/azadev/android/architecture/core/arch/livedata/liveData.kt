@@ -23,5 +23,7 @@ fun <T> mediatorLiveData(vararg liveDataItems: LiveData<*>, predicate: () -> T):
 		}
 	}
 
+	mediator.observeForever { }
+
 	return mediator
 }
